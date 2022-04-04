@@ -68,6 +68,17 @@ struct DoThi{
 			delete []node;
 			node=node2;
 		}
+		if(mode==-1){
+			Node *node2=new Node[stt_node+1];
+			for(int i=0;i<=del_index-1;++i){
+				node2[i]=node[i];
+			}
+			for(int i=del_index;i<=stt_node;++i){
+				node2[i]=node[i+1];
+			}
+			delete []node;
+			node=node2;
+		}
 	}
 	void reset_MT(int **MT1){
 		FOR(i,0,stt_Node)
